@@ -1,34 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sagun | Personal Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1020;
-      color: #f5f7ff;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-    }
-    main { padding: 24px; }
-    h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 12px; }
-    p { color: #b7c0d8; line-height: 1.7; }
-    a { color: #7dd3fc; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagun Poudel | Personal Website</title>
+    <meta name="description" content="Welcome to my personal website. Explore my interests in AI, computer science and cybersecurity.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0b0f;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #7c9cff;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            color: #7c9cff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .hero {
+            max-width: 750px;
+        }
+
+        .tag {
+            color: #7c9cff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #7c9cff;
+        }
+
+        .description {
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 620px;
+        }
+
+        .links {
+            margin-top: 35px;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 13px 24px;
+            margin-right: 12px;
+            border: 1px solid #7c9cff;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            background: #7c9cff;
+            color: #0b0b0f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #222;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
-  <main>
-    <p>HELLO, WORLD 👋</p>
-    <h1>I'm Sagun Poudel.</h1>
-    <p>Welcome to my personal website.</p>
-    <p>I'm exploring AI, software development and cybersecurity.</p>
-    <a href="https://github.com/">Visit GitHub</a>
-  </main>
+
+    <header>
+        <div class="logo">SAGUN LABS.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <p class="tag">WELCOME TO MY DIGITAL SPACE</p>
+
+            <h1>Hi, I'm <span>Sagun Poudel.</span></h1>
+
+            <p class="description" id="about">
+                Traffic Light tinta xa ...k uslai tmro chinta xa??
+            </p>
+
+            <div class="links">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="mailto:hello@sagun-poudel.com">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Sagun Poudel. All rights reserved.
+    </footer>
+
 </body>
 </html>
