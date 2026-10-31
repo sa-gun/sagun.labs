@@ -6,6 +6,9 @@
     <title>Sagun Poudel | Personal Website</title>
     <meta name="description" content="Welcome to my personal website. Explore my interests.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -79,6 +82,50 @@
             max-width: 620px;
         }
 
+        /* ---- Animated line (only this line is styled) ---- */
+        .description .traffic-line {
+            display: inline-block;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+            font-size: clamp(20px, 3.2vw, 28px);
+            line-height: 1.5;
+            background: linear-gradient(90deg, #ff4d4d, #ffc933, #3ddc84, #ffc933, #ff4d4d);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            opacity: 0;
+            transform: translateY(20px);
+            animation:
+                lineIn 1s ease-out 0.3s forwards,
+                trafficFlow 4s linear 1.3s infinite,
+                floaty 3s ease-in-out 1.3s infinite;
+        }
+
+        @keyframes lineIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes trafficFlow {
+            0%   { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        @keyframes floaty {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-6px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .description .traffic-line {
+                animation: lineIn 0.01s forwards;
+            }
+        }
+
         .links {
             margin-top: 35px;
         }
@@ -125,7 +172,7 @@
             <h1>Hi, I'm <span>Sagun Poudel.</span></h1>
 
             <p class="description" id="about">
-                Traffic Light tinta xa ...k uslai tmro chinta xa??
+                <span class="traffic-line">Traffic Light tinta xa ...k uslai tmro chinta xa??</span>
             </p>
 
             <div class="links">
